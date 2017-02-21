@@ -1,0 +1,106 @@
+{
+  "@context" : {
+    "term_status" : {
+      "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "targetClass" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#targetClass",
+      "@type" : "@id"
+    },
+    "ObjectPropertyMapping" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#ObjectPropertyMapping"
+    },
+    "Class" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Class"
+    },
+    "valuesTransformedBy" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#valuesTransformedBy",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "key" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#key",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "AccessMapping" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#AccessMapping"
+    },
+    "hasMapping" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#hasMapping",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "mapsResourcesFrom" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#mapsResourcesFrom",
+      "@type" : "@id"
+    },
+    "DatatypePropertyMapping" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#DatatypePropertyMapping"
+    },
+    "exposes" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#exposes",
+      "@type" : "@id"
+    },
+    "Mapping" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#Mapping"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "Datatype" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    },
+    "ObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    },
+    "Property" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "hasAccessMapping" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#hasAccessMapping",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1/publisher"
+    },
+    "targetDatatype" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#targetDatatype",
+      "@type" : "@id"
+    },
+    "Endpoint" : {
+      "@id" : "http://iot.linkeddata.es/def/wot#Endpoint"
+    },
+    "predicate" : {
+      "@id" : "http://iot.linkeddata.es/def/wot-mappings#predicate",
+      "@type" : "@id"
+    },
+    "ThingDescription" : {
+      "@id" : "http://iot.linkeddata.es/def/wot#ThingDescription"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "DatatypeProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

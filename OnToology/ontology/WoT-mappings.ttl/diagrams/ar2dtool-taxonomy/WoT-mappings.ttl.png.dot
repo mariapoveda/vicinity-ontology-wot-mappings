@@ -1,0 +1,24 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "vcnt-map:ObjectPropertyMapping" "vcnt-map:DatatypePropertyMapping" "vcnt-map:Mapping" "wot:InteractionPattern" "wot:PhysicalEntity" "wot:Property" "wot:VirtualEntity" "wot:Entity" "wot:Action" "wot:Event" "vcnt-core:Service" "vcnt-core:Agent" "vcnt-core:Device" "org:FormalOrganization" "org:OrganizationalCollaboration" "org:Organization" "org:Role" "org:ChangeEvent" "org:OrganizationalUnit" ; /*classes style*/
+	"org:OrganizationalUnit" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+	"wot:Property" -> "wot:InteractionPattern" [ label = "rdfs:subClassOf" ];
+	"org:Role" -> "skos:Concept" [ label = "rdfs:subClassOf" ];
+	"wot:PhysicalEntity" -> "wot:Entity" [ label = "rdfs:subClassOf" ];
+	"wot:Event" -> "wot:InteractionPattern" [ label = "rdfs:subClassOf" ];
+	"vcnt-core:Agent" -> "foaf:Agent" [ label = "rdfs:subClassOf" ];
+	"vcnt-map:DatatypePropertyMapping" -> "vcnt-map:Mapping" [ label = "rdfs:subClassOf" ];
+	"vcnt-map:ObjectPropertyMapping" -> "vcnt-map:Mapping" [ label = "rdfs:subClassOf" ];
+	"vcnt-core:Service" -> "wot:VirtualEntity" [ label = "rdfs:subClassOf" ];
+	"org:Organization" -> "foaf:Agent" [ label = "rdfs:subClassOf" ];
+	"org:ChangeEvent" -> "prov:Activity" [ label = "rdfs:subClassOf" ];
+	"wot:VirtualEntity" -> "wot:Entity" [ label = "rdfs:subClassOf" ];
+	"org:FormalOrganization" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+	"org:FormalOrganization" -> "foaf:Organization" [ label = "rdfs:subClassOf" ];
+	"vcnt-core:Device" -> "wot:PhysicalEntity" [ label = "rdfs:subClassOf" ];
+	"gr:BusinessEntity" -> "org:FormalOrganization" [ label = "rdfs:subClassOf" ];
+	"org:OrganizationalCollaboration" -> "org:Organization" [ label = "rdfs:subClassOf" ];
+	"wot:Action" -> "wot:InteractionPattern" [ label = "rdfs:subClassOf" ];
+
+}

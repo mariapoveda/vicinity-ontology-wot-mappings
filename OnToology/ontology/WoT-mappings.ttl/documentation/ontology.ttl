@@ -1,0 +1,171 @@
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix :        <http://iot.linkeddata.es/def/wot-mappings#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix geo:     <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix vs:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix wot:     <http://xmlns.com/wot/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix saref:   <https://w3id.org/saref#> .
+@prefix doap:    <http://usefulinc.com/ns/doap#> .
+
+vs:term_status
+      a       owl:AnnotationProperty .
+
+:Mapping
+      a       owl:Class ;
+      rdfs:label "Mapping"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:minQualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger ;
+                owl:onClass rdf:Property ;
+                owl:onProperty :predicate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :key ;
+                owl:someValuesFrom xsd:string
+              ] ;
+      owl:equivalentClass
+              [ a       owl:Class ;
+                owl:unionOf (:DatatypePropertyMapping :ObjectPropertyMapping)
+              ] .
+
+:mapsResourcesFrom
+      a       owl:ObjectProperty ;
+      rdfs:domain :AccessMapping ;
+      rdfs:label "maps resources from"@en ;
+      rdfs:range <http://iot.linkeddata.es/def/wot#Endpoint> .
+
+:     a       owl:Ontology ;
+      rdfs:comment "This ontology represent the mapping definitionts between WoT to allow interoperability in an IoT context based on VICINITY technological solutions."@en ;
+      dc:publisher <http://www.oeg-upm.net/> ;
+      dc:title "Vicinity WoT mappings model"@en ;
+      dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
+      dcterms:creator <http://purl.org/net/mpoveda> , <http://www.garcia-castro.com/foaf.rdf#me> ;
+      dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+      vann:preferredNamespacePrefix
+              "vcnt-map" ;
+      vann:preferredNamespaceUri
+              "http://iot.linkeddata.es/def/wot-mappings" ;
+      owl:imports <http://iot.linkeddata.es/def/wot#> , <http://iot.linkeddata.es/def/core#> ;
+      owl:versionInfo "0.0.1" .
+
+:targetDatatype
+      a       owl:ObjectProperty ;
+      rdfs:domain :DatatypePropertyMapping ;
+      rdfs:label "targetDatatype"@en ;
+      rdfs:range rdfs:Datatype .
+
+:hasAccessMapping
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://iot.linkeddata.es/def/wot#ThingDescription> ;
+      rdfs:label "hasAccessMapping"@en ;
+      rdfs:range :AccessMapping .
+
+owl:DatatypeProperty
+      a       owl:Class .
+
+:AccessMapping
+      a       owl:Class ;
+      rdfs:label "Access mapping"@en ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Endpoint> ;
+                owl:onProperty :mapsResourcesFrom
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Mapping ;
+                owl:onProperty :hasMapping
+              ] .
+
+:valuesTransformedBy
+      a       owl:ObjectProperty ;
+      rdfs:label "valuesTransformedBy"@en .
+
+:ObjectPropertyMapping
+      a       owl:Class ;
+      rdfs:label "ObjectPropertyMapping"@en ;
+      rdfs:subClassOf :Mapping ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom owl:ObjectProperty ;
+                owl:onProperty :predicate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom rdfs:Class ;
+                owl:onProperty :targetClass
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:maxQualifiedCardinality
+                        "1"^^xsd:nonNegativeInteger ;
+                owl:onClass <http://iot.linkeddata.es/def/wot#ThingDescription> ;
+                owl:onProperty :valuesTransformedBy
+              ] .
+
+rdfs:Datatype
+      a       owl:Class .
+
+:key  a       owl:DatatypeProperty ;
+      rdfs:domain :Mapping ;
+      rdfs:label "key"@en ;
+      rdfs:range xsd:string .
+
+:predicate
+      a       owl:ObjectProperty ;
+      rdfs:label "predicate"@en .
+
+dcterms:contributor
+      a       owl:AnnotationProperty .
+
+:hasMapping
+      a       owl:ObjectProperty ;
+      rdfs:domain :AccessMapping ;
+      rdfs:label "hasMapping"@en ;
+      rdfs:range :Mapping .
+
+owl:ObjectProperty
+      a       owl:Class .
+
+:targetClass
+      a       owl:ObjectProperty ;
+      rdfs:domain :ObjectPropertyMapping ;
+      rdfs:label "targetClass"@en ;
+      rdfs:range rdfs:Class .
+
+rdfs:Class
+      a       owl:Class .
+
+:exposes
+      a       owl:ObjectProperty ;
+      rdfs:domain <http://iot.linkeddata.es/def/wot#ThingDescription> ;
+      rdfs:label "exposes"@en ;
+      rdfs:range <http://iot.linkeddata.es/def/wot#Endpoint> .
+
+rdf:Property
+      a       owl:Class .
+
+:DatatypePropertyMapping
+      a       owl:Class ;
+      rdfs:label "DatatypePropertyMapping"@en ;
+      rdfs:subClassOf :Mapping ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom owl:DatatypeProperty ;
+                owl:onProperty :predicate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom rdfs:Datatype ;
+                owl:onProperty :targetDatatype
+              ] .
