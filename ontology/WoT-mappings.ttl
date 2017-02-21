@@ -67,11 +67,11 @@ vs:term_status rdf:type owl:AnnotationProperty .
             rdfs:label "hasMapping"@en .
 
 
-###  http://iot.linkeddata.es/def/wot-mappings#mapsValuesFrom
-:mapsValuesFrom rdf:type owl:ObjectProperty ;
-                rdfs:domain :AccessMapping ;
-                rdfs:range <http://iot.linkeddata.es/def/wot#Endpoint> ;
-                rdfs:label "mapsValuesFrom"@en .
+###  http://iot.linkeddata.es/def/wot-mappings#mapsResourcesFrom
+:mapsResourcesFrom rdf:type owl:ObjectProperty ;
+                   rdfs:domain :AccessMapping ;
+                   rdfs:range <http://iot.linkeddata.es/def/wot#Endpoint> ;
+                   rdfs:label "maps resources from"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot-mappings#predicate
@@ -120,7 +120,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                  owl:allValuesFrom :Mapping
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty :mapsValuesFrom ;
+                                 owl:onProperty :mapsResourcesFrom ;
                                  owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Endpoint>
                                ] ;
                rdfs:label "Access mapping"@en .
