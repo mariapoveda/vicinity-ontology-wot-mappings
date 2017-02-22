@@ -6691,7 +6691,7 @@ wot:ThingDescription}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural
 \ls1\ilvl0
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:entityName:: String\
+wot:thingName:: String\
 wot:baseURI:: String}</string>
 			</dict>
 			<key>VFlip</key>
@@ -6780,7 +6780,7 @@ wot:baseURI:: String}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-wot:Entity}</string>
+wot:Thing}</string>
 			</dict>
 			<key>VFlip</key>
 			<string>YES</string>
@@ -7653,7 +7653,7 @@ Class}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-02-21 13:47:40 +0000</string>
+	<string>2017-02-22 09:39:49 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -7743,7 +7743,7 @@ Class}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, -15.459497206703841}, {984.17597765363132, 829.99999999999989}}</string>
+		<string>{{0, -0.96927374301682223}, {984.17597765363132, 830.00000000000023}}</string>
 		<key>Zoom</key>
 		<real>0.86265060240963853</real>
 		<key>ZoomValues</key>
