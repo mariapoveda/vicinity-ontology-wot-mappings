@@ -50,6 +50,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :exposes rdf:type owl:ObjectProperty ;
          rdfs:domain <http://iot.linkeddata.es/def/wot#ThingDescription> ;
          rdfs:range <http://iot.linkeddata.es/def/wot#Endpoint> ;
+         rdfs:comment "Link from a thing description to the endpoints in which it exposes information"@en ;
          rdfs:label "exposes"@en .
 
 
@@ -57,25 +58,38 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :hasAccessMapping rdf:type owl:ObjectProperty ;
                   rdfs:domain <http://iot.linkeddata.es/def/wot#ThingDescription> ;
                   rdfs:range :AccessMapping ;
-                  rdfs:label "hasAccessMapping"@en .
+                  rdfs:comment "Link between a thing description and the access mapping that can be used to access the information provided in the endpoints exposes by such thing description. This class acts as an n-ary pattern linking the enpoints with the spedific mappings."@en ;
+                  rdfs:label "has access mapping"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot-mappings#hasMapping
 :hasMapping rdf:type owl:ObjectProperty ;
             rdfs:domain :AccessMapping ;
             rdfs:range :Mapping ;
-            rdfs:label "hasMapping"@en .
+            rdfs:comment "Link between the access mappings to specific mappings."@en ;
+            rdfs:label "has mapping"@en .
+
+
+###  http://iot.linkeddata.es/def/wot-mappings#isExecutedAfter
+:isExecutedAfter rdf:type owl:ObjectProperty ;
+                 rdfs:domain :AccessMapping ;
+                 rdfs:range :AccessMapping ;
+                 rdfs:comment "Indicates which access mappings should be excuted before the one being subject of this property." ;
+                 rdfs:label "is executed after"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot-mappings#mapsResourcesFrom
-:mapsResourcesFrom rdf:type owl:ObjectProperty ;
+:mapsResourcesFrom rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
                    rdfs:domain :AccessMapping ;
                    rdfs:range <http://iot.linkeddata.es/def/wot#Endpoint> ;
+                   rdfs:comment "Link from the access mapping to the specific endpoint in which the mappings (see hasMapping) indicated by the access mapping instance can be applied."@en ;
                    rdfs:label "maps resources from"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot-mappings#predicate
 :predicate rdf:type owl:ObjectProperty ;
+           rdfs:comment "Link from a mapping an the property or properties to which the key should be mapped to. The property could be RDF properties or OWL object or datatype properties."@en ;
            rdfs:label "predicate"@en .
 
 
@@ -83,29 +97,38 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :targetClass rdf:type owl:ObjectProperty ;
              rdfs:domain :ObjectPropertyMapping ;
              rdfs:range rdfs:Class ;
-             rdfs:label "targetClass"@en .
+             rdfs:label "target class"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot-mappings#targetDatatype
 :targetDatatype rdf:type owl:ObjectProperty ;
                 rdfs:domain :DatatypePropertyMapping ;
                 rdfs:range rdfs:Datatype ;
-                rdfs:label "targetDatatype"@en .
+                rdfs:label "target datatype"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot-mappings#valuesTransformedBy
 :valuesTransformedBy rdf:type owl:ObjectProperty ;
-                     rdfs:label "valuesTransformedBy"@en .
+                     rdfs:label "values transformed by"@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
+###  http://iot.linkeddata.es/def/wot-mappings#jsonPath
+:jsonPath rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Mapping ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Express a pattern to select a set of efements of interest in a JSON document."@en ;
+          rdfs:label "JSON path"@en .
+
+
 ###  http://iot.linkeddata.es/def/wot-mappings#key
 :key rdf:type owl:DatatypeProperty ;
      rdfs:domain :Mapping ;
      rdfs:range xsd:string ;
+     rdfs:comment "Field to be mapped from the endpoint"@en ;
      rdfs:label "key"@en .
 
 
@@ -121,8 +144,10 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :mapsResourcesFrom ;
-                                 owl:allValuesFrom <http://iot.linkeddata.es/def/wot#Endpoint>
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass <http://iot.linkeddata.es/def/wot#Endpoint>
                                ] ;
+               rdfs:comment "This class allows the linking between one or more mappings that are executed against a given endpoint." ;
                rdfs:label "Access mapping"@en .
 
 
@@ -137,7 +162,8 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                            owl:onProperty :targetDatatype ;
                                            owl:allValuesFrom rdfs:Datatype
                                          ] ;
-                         rdfs:label "DatatypePropertyMapping"@en .
+                         rdfs:comment "An entity specialized from Mapping than indicates the relation between a given key (provided as structure data in an online resource) and the OWL datatype property to which the values should be mapped and optionally the rdfs datatype in which the values are expressed."@en ;
+                         rdfs:label "Datatype property mapping"@en .
 
 
 ###  http://iot.linkeddata.es/def/wot-mappings#Mapping
@@ -156,6 +182,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
                            owl:onProperty :key ;
                            owl:someValuesFrom xsd:string
                          ] ;
+         rdfs:comment "An entity than indicates the relation between a given key (provided as structure data in an online resource) and the RDF property to which the values should be mapped and the target type of object. The RDF properties could be OWL object or datatype properties. The target object might be RDFS classes or datatypes."@en ;
          rdfs:label "Mapping"@en .
 
 
@@ -175,27 +202,35 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                          owl:onClass <http://iot.linkeddata.es/def/wot#ThingDescription>
                                        ] ;
-                       rdfs:label "ObjectPropertyMapping"@en .
+                       rdfs:comment "An entity specialized from Mapping than indicates the relation between a given key (provided as structure data in an online resource) and the OWL object property to which the values should be mapped and optionally the rdfs class or classes that the target instances belong to."@en ;
+                       rdfs:label "Object property mapping"@en .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
-rdf:Property rdf:type owl:Class .
+rdf:Property rdf:type owl:Class ;
+             rdfs:isDefinedBy rdf: .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Class
-rdfs:Class rdf:type owl:Class .
+rdfs:Class rdf:type owl:Class ;
+           rdfs:isDefinedBy rdfs: .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#Datatype
-rdfs:Datatype rdf:type owl:Class .
+rdfs:Datatype rdf:type owl:Class ;
+              rdfs:isDefinedBy rdfs: .
 
 
 ###  http://www.w3.org/2002/07/owl#DatatypeProperty
-owl:DatatypeProperty rdf:type owl:Class .
+owl:DatatypeProperty rdf:type owl:Class ;
+                     rdfs:subClassOf rdf:Property ;
+                     rdfs:isDefinedBy owl: .
 
 
 ###  http://www.w3.org/2002/07/owl#ObjectProperty
-owl:ObjectProperty rdf:type owl:Class .
+owl:ObjectProperty rdf:type owl:Class ;
+                   rdfs:subClassOf rdf:Property ;
+                   rdfs:isDefinedBy owl: .
 
 
 ###  Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi
