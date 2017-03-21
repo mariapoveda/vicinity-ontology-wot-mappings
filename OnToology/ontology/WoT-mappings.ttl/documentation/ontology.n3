@@ -70,7 +70,7 @@ _:A1b1d4a5cX3aX15af007aeceX3aXX2dX7ff4 <http://www.w3.org/1999/02/22-rdf-syntax-
 <http://iot.linkeddata.es/def/wot-mappings#> <http://www.w3.org/2002/07/owl#imports> <http://iot.linkeddata.es/def/wot#> .
 <http://iot.linkeddata.es/def/wot-mappings#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcnt-map" .
 <http://iot.linkeddata.es/def/wot-mappings#> <http://purl.org/dc/elements/1.1/title> "Vicinity WoT mappings model"@en .
-<http://iot.linkeddata.es/def/wot-mappings#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<http://iot.linkeddata.es/def/wot-mappings#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
 <http://iot.linkeddata.es/def/wot-mappings#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <http://iot.linkeddata.es/def/wot-mappings#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://iot.linkeddata.es/def/wot-mappings#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represent the mapping definitionts between WoT to allow interoperability in an IoT context based on VICINITY technological solutions."@en .

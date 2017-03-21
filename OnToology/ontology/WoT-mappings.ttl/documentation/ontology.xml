@@ -52,7 +52,7 @@
     <owl:imports rdf:resource="http://iot.linkeddata.es/def/wot#"/>
     <vann:preferredNamespacePrefix>vcnt-map</vann:preferredNamespacePrefix>
     <dc:title xml:lang="en">Vicinity WoT mappings model</dc:title>
-    <owl:versionInfo>0.0.1</owl:versionInfo>
+    <owl:versionInfo>0.0.2</owl:versionInfo>
     <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <rdfs:comment xml:lang="en">This ontology represent the mapping definitionts between WoT to allow interoperability in an IoT context based on VICINITY technological solutions.</rdfs:comment>

@@ -65,7 +65,7 @@ vs:term_status
       vann:preferredNamespaceUri
               "http://iot.linkeddata.es/def/wot-mappings" ;
       owl:imports <http://iot.linkeddata.es/def/wot#> , <http://iot.linkeddata.es/def/core#> ;
-      owl:versionInfo "0.0.1" .
+      owl:versionInfo "0.0.2" .
 
 :jsonPath
       a       owl:DatatypeProperty ;
