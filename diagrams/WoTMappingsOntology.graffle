@@ -78,7 +78,7 @@
 				<key>ID</key>
 				<integer>42056</integer>
 				<key>Position</key>
-				<real>0.34138352485157381</real>
+				<real>0.34138351678848267</real>
 				<key>RotationType</key>
 				<integer>0</integer>
 			</dict>
@@ -890,7 +890,7 @@ map:Mapping}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{565.58265053211619, 362.77381635293682}, {23.012603759765625, 23.012603759765625}}</string>
+			<string>{{569.81006494210692, 373.27433348937529}, {23.012603759765625, 23.012603759765625}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -989,7 +989,7 @@ map:Mapping}</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{618.98020951083629, 374.28011823281963}</string>
+				<string>{618.98020951083629, 384.78063536925811}</string>
 				<string>{552.55463739966137, 411.90865904641987}</string>
 			</array>
 			<key>Style</key>
@@ -1153,7 +1153,7 @@ map:Mapping}</string>
 				<key>ID</key>
 				<integer>42012</integer>
 				<key>Position</key>
-				<real>0.72125023468638694</real>
+				<real>0.72125023603439331</real>
 				<key>RotationType</key>
 				<integer>0</integer>
 			</dict>
@@ -1992,7 +1992,7 @@ rdfs:Datatype}</string>
 			<key>Points</key>
 			<array>
 				<string>{673.20204054027317, 499.22222757608409}</string>
-				<string>{702.50961918636096, 378.115554021658}</string>
+				<string>{723.78146163963208, 390.7161757870731}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2058,7 +2058,7 @@ rdfs:Datatype}</string>
 			<key>Points</key>
 			<array>
 				<string>{670.85303110456687, 428.44642293611821}</string>
-				<string>{702.50961918636096, 378.115554021658}</string>
+				<string>{723.78146163963208, 390.7161757870731}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -3482,7 +3482,7 @@ map:predicate (1..N) }</string>
 			<real>-1</real>
 			<key>Points</key>
 			<array>
-				<string>{618.98020951083629, 343.59666301302957}</string>
+				<string>{618.98020951083618, 343.59666301302957}</string>
 				<string>{219.08290259511514, 364.31999185681343}</string>
 			</array>
 			<key>Style</key>
@@ -3638,7 +3638,7 @@ rdf:Property}</string>
 				<key>ID</key>
 				<integer>42014</integer>
 				<key>Position</key>
-				<real>0.54689896690439854</real>
+				<real>0.54689896106719971</real>
 				<key>RotationType</key>
 				<integer>0</integer>
 			</dict>
@@ -3785,7 +3785,7 @@ map:mapsResourcesFrom (F) (1)}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{618.98020951083629, 355.10295026189237}, {100.23528862338526, 23.012603759765625}}</string>
+			<string>{{618.98020951083618, 355.10295026189237}, {125.76149880657012, 35.613225525180667}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -3870,14 +3870,15 @@ map:mapsResourcesFrom (F) (1)}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural
 \ls1\ilvl0
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-map:key:: String}</string>
+map:key:: String\
+map:jsonPath:: String}</string>
 			</dict>
 			<key>VFlip</key>
 			<string>YES</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{621.77155817623895, 290.45020259552825}, {94.262535850687073, 23.012603759765625}}</string>
+			<string>{{631.65802777234342, 287.57098904904763}, {94.262535850687073, 23.012603759765625}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -3905,7 +3906,7 @@ map:key:: String}</string>
 				<key>ID</key>
 				<integer>42009</integer>
 				<key>Position</key>
-				<real>0.54965731853093092</real>
+				<real>0.54965734481811523</real>
 				<key>RotationType</key>
 				<integer>0</integer>
 			</dict>
@@ -4007,11 +4008,11 @@ map:hasMapping (0..N)}</string>
 			<key>OrthogonalBarPoint</key>
 			<string>{487.98009404187127, 416.11893402281328}</string>
 			<key>OrthogonalBarPosition</key>
-			<real>-1</real>
+			<real>24.556527786598224</real>
 			<key>Points</key>
 			<array>
 				<string>{668.64676224498476, 265.17729092893046}</string>
-				<string>{669.09785382252892, 332.09034650212686}</string>
+				<string>{681.86095891412128, 332.09034650212686}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -4240,7 +4241,7 @@ wot:Endpoint}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{618.98020951083629, 332.09034650212686}, {100.23528862338526, 23.012603759765625}}</string>
+			<string>{{618.98020951083618, 332.09034650212686}, {125.76149880657012, 23.012603759765625}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -7829,7 +7830,7 @@ Class}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-03-17 13:51:31 +0000</string>
+	<string>2017-03-21 08:59:16 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -7919,7 +7920,7 @@ Class}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, -10.822625698324075}, {984.17597765363132, 830}}</string>
+		<string>{{0, -0.96927374301682223}, {984.17597765363132, 830.00000000000023}}</string>
 		<key>Zoom</key>
 		<real>0.86265060240963853</real>
 		<key>ZoomValues</key>
