@@ -41,27 +41,29 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot-mappings#ObjectPropertyMapping"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <owl:unionOf rdf:nodeID="A4"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#predicate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#">
     <owl:imports rdf:resource="http://iot.linkeddata.es/def/wot#"/>
     <vann:preferredNamespacePrefix>vcnt-map</vann:preferredNamespacePrefix>
     <dc:title xml:lang="en">Vicinity WoT mappings model</dc:title>
-    <owl:versionInfo>0.0.2</owl:versionInfo>
+    <rdfs:comment xml:lang="en">This ontology represent the mapping definitionts between WoT to allow interoperability in an IoT context based on VICINITY technological solutions.</rdfs:comment>
     <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <rdfs:comment xml:lang="en">This ontology represent the mapping definitionts between WoT to allow interoperability in an IoT context based on VICINITY technological solutions.</rdfs:comment>
     <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
+    <owl:versionInfo>0.0.2</owl:versionInfo>
     <owl:imports rdf:resource="http://iot.linkeddata.es/def/core#"/>
     <vann:preferredNamespaceUri>http://iot.linkeddata.es/def/wot-mappings</vann:preferredNamespaceUri>
     <dcterms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
     <dcterms:creator rdf:resource="http://purl.org/net/mpoveda"/>
     <dcterms:contributor rdf:resource="http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#targetClass"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#jsonPath">
     <rdfs:label xml:lang="en">JSON path</rdfs:label>
@@ -77,15 +79,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A5">
-    <owl:onClass rdf:resource="http://iot.linkeddata.es/def/wot#ThingDescription"/>
-    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#valuesTransformedBy"/>
+    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot-mappings#Mapping"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#hasMapping"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <owl:onClass rdf:resource="http://iot.linkeddata.es/def/wot#Endpoint"/>
-    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#mapsResourcesFrom"/>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#key"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#hasAccessMapping">
@@ -95,22 +95,20 @@
     <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot#ThingDescription"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot-mappings#ObjectPropertyMapping"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <owl:onClass rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#predicate"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#AccessMapping">
     <rdfs:label xml:lang="en">Access mapping</rdfs:label>
     <rdfs:comment>This class allows the linking between one or more mappings that are executed against a given endpoint.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A6"/>
     <rdfs:subClassOf rdf:nodeID="A7"/>
+    <rdfs:subClassOf rdf:nodeID="A5"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#valuesTransformedBy">
@@ -120,20 +118,25 @@
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#ObjectPropertyMapping">
     <rdfs:label xml:lang="en">Object property mapping</rdfs:label>
     <rdfs:comment xml:lang="en">An entity specialized from Mapping than indicates the relation between a given key (provided as structure data in an online resource) and the OWL object property to which the values should be mapped and optionally the rdfs class or classes that the target instances belong to.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A5"/>
     <rdfs:subClassOf rdf:nodeID="A8"/>
+    <rdfs:subClassOf rdf:nodeID="A4"/>
     <rdfs:subClassOf rdf:nodeID="A9"/>
     <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot-mappings#Mapping"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#predicate"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:unionOf rdf:nodeID="A10"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Datatype">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:onClass rdf:resource="http://iot.linkeddata.es/def/wot#ThingDescription"/>
+    <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#valuesTransformedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#key">
     <rdfs:label xml:lang="en">key</rdfs:label>
@@ -150,11 +153,6 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#targetDatatype"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#hasMapping">
     <rdfs:label xml:lang="en">has mapping</rdfs:label>
     <rdfs:comment xml:lang="en">Link between the access mappings to specific mappings.</rdfs:comment>
@@ -162,9 +160,11 @@
     <rdfs:domain rdf:resource="http://iot.linkeddata.es/def/wot-mappings#AccessMapping"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:rest rdf:nodeID="A3"/>
-    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot-mappings#DatatypePropertyMapping"/>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:onClass rdf:resource="http://iot.linkeddata.es/def/wot#Endpoint"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#mapsResourcesFrom"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2002/07/owl#"/>
@@ -181,6 +181,11 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#predicate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#exposes">
     <rdfs:label xml:lang="en">exposes</rdfs:label>
     <rdfs:comment xml:lang="en">Link from a thing description to the endpoints in which it exposes information</rdfs:comment>
@@ -192,32 +197,27 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#predicate"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="http://iot.linkeddata.es/def/wot-mappings#DatatypePropertyMapping"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#key"/>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:onClass rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#predicate"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iot.linkeddata.es/def/wot-mappings#DatatypePropertyMapping">
     <rdfs:label xml:lang="en">Datatype property mapping</rdfs:label>
     <rdfs:comment xml:lang="en">An entity specialized from Mapping than indicates the relation between a given key (provided as structure data in an online resource) and the OWL datatype property to which the values should be mapped and optionally the rdfs datatype in which the values are expressed.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="A10"/>
     <rdfs:subClassOf rdf:nodeID="A11"/>
+    <rdfs:subClassOf rdf:nodeID="A3"/>
     <rdfs:subClassOf rdf:resource="http://iot.linkeddata.es/def/wot-mappings#Mapping"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <owl:allValuesFrom rdf:resource="http://iot.linkeddata.es/def/wot-mappings#Mapping"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#hasMapping"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#targetClass"/>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    <owl:onProperty rdf:resource="http://iot.linkeddata.es/def/wot-mappings#targetDatatype"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
 </rdf:RDF>
