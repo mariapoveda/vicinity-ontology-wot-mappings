@@ -127,13 +127,13 @@ owl:DatatypeProperty
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom owl:ObjectProperty ;
-                owl:onProperty :predicate
+                owl:allValuesFrom rdfs:Class ;
+                owl:onProperty :targetClass
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Class ;
-                owl:onProperty :targetClass
+                owl:allValuesFrom owl:ObjectProperty ;
+                owl:onProperty :predicate
               ] .
 
 rdfs:Datatype
