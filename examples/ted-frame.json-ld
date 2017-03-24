@@ -1,0 +1,79 @@
+{
+   "@context": {
+      "transformed_by": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#valuesTransformedBy", 
+         "@type": "@id"
+      }, 
+      "core": "http://iot.linkeddata.es/def/core#", 
+      "predicate": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#predicate", 
+         "@type": "@id"
+      }, 
+      "@vocab": "http://iot.linkeddata.es/def/wot#", 
+      "mappings": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#hasMapping", 
+         "@type": "@id"
+      }, 
+      "links": {
+         "@id": "http://iot.linkeddata.es/def/wot#isAccessibleThrough", 
+         "@type": "@id"
+      }, 
+      "map": "http://iot.linkeddata.es/def/wot-mappings#", 
+      "ecosystem": {
+         "@id": "http://iot.linkeddata.es/def/core#describes", 
+         "@type": "@id"
+      }, 
+      "interactions": {
+         "@id": "http://iot.linkeddata.es/def/wot#providesInteractionPattern", 
+         "@type": "@id"
+      }, 
+      "TED": "http://iot.linkeddata.es/def/core#ThingEcosystemDescription", 
+      "Mapping": "http://iot.linkeddata.es/def/wot-mappings#Mapping", 
+      "label": "http://www.w3.org/2000/01/rdf-schema#label", 
+      "AccessMapping": "http://iot.linkeddata.es/def/wot-mappings#AccessMapping", 
+      "href": "http://iot.linkeddata.es/def/wot#href", 
+      "source": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#mapsResourcesFrom", 
+         "@type": "@id"
+      }, 
+      "key": "http://iot.linkeddata.es/def/wot-mappings#key", 
+      "Ecosystem": "http://iot.linkeddata.es/def/core#Ecosystem", 
+      "components": {
+         "@id": "http://iot.linkeddata.es/def/core#hasComponent", 
+         "@type": "@id"
+      }, 
+      "TD": "http://iot.linkeddata.es/def/wot#ThingDescription", 
+      "describes": {
+         "@id": "http://iot.linkeddata.es/def/wot#describes", 
+         "@type": "@id"
+      }, 
+      "access_mappings": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#hasAccessMapping", 
+         "@type": "@id"
+      }
+   }, 
+   "@graph": [
+      {
+         "ecosystem": {
+            "@id": "_:b2", 
+            "@type": "Ecosystem", 
+            "components": [
+               {
+                  "@id": "http://es.dbpedia.org/resource/A%C3%B1ora", 
+                  "@type": "http://schema.org/Place"
+               }, 
+               {
+                  "@id": "_:b15", 
+                  "@type": "Service"
+               }, 
+               {
+                  "@id": "http://es.dbpedia.org/resource/Madrid", 
+                  "@type": "http://schema.org/Place"
+               }
+            ]
+         }, 
+         "@id": "_:b1", 
+         "@type": "TED"
+      }
+   ]
+}

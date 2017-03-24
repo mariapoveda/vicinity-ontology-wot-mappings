@@ -1,0 +1,409 @@
+{
+   "@context": {
+      "transformed_by": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#valuesTransformedBy", 
+         "@type": "@id"
+      }, 
+      "core": "http://iot.linkeddata.es/def/core#", 
+      "predicate": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#predicate", 
+         "@type": "@id"
+      }, 
+      "@vocab": "http://iot.linkeddata.es/def/wot#", 
+      "mappings": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#hasMapping", 
+         "@type": "@id"
+      }, 
+      "links": {
+         "@id": "http://iot.linkeddata.es/def/wot#isAccessibleThrough", 
+         "@type": "@id"
+      }, 
+      "map": "http://iot.linkeddata.es/def/wot-mappings#", 
+      "ecosystem": {
+         "@id": "http://iot.linkeddata.es/def/core#describes", 
+         "@type": "@id"
+      }, 
+      "interactions": {
+         "@id": "http://iot.linkeddata.es/def/wot#providesInteractionPattern", 
+         "@type": "@id"
+      }, 
+      "TED": "http://iot.linkeddata.es/def/core#ThingEcosystemDescription", 
+      "Mapping": "http://iot.linkeddata.es/def/wot-mappings#Mapping", 
+      "label": "http://www.w3.org/2000/01/rdf-schema#label", 
+      "AccessMapping": "http://iot.linkeddata.es/def/wot-mappings#AccessMapping", 
+      "href": "http://iot.linkeddata.es/def/wot#href", 
+      "source": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#mapsResourcesFrom", 
+         "@type": "@id"
+      }, 
+      "key": "http://iot.linkeddata.es/def/wot-mappings#key", 
+      "Ecosystem": "http://iot.linkeddata.es/def/core#Ecosystem", 
+      "components": {
+         "@id": "http://iot.linkeddata.es/def/core#hasComponent", 
+         "@type": "@id"
+      }, 
+      "TD": "http://iot.linkeddata.es/def/wot#ThingDescription", 
+      "describes": {
+         "@id": "http://iot.linkeddata.es/def/wot#describes", 
+         "@type": "@id"
+      }, 
+      "access_mappings": {
+         "@id": "http://iot.linkeddata.es/def/wot-mappings#hasAccessMapping", 
+         "@type": "@id"
+      }
+   }, 
+   "@graph": [
+      {
+         "describes": {
+            "@id": "_:b11", 
+            "@type": "Property", 
+            "links": "_:b6", 
+            "label": "tsky"
+         }, 
+         "@id": "_:b10", 
+         "@type": "TD", 
+         "identifier": "tsky", 
+         "access_mappings": {
+            "source": {
+               "href": "$item/properties/tsky", 
+               "@id": "_:b6", 
+               "@type": "Endpoint", 
+               "mediaType": "application/json"
+            }, 
+            "@id": "_:b12", 
+            "@type": "AccessMapping", 
+            "mappings": [
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#hasLatestEntry", 
+                  "@id": "_:b14", 
+                  "@type": "Mapping", 
+                  "key": "hasLatestEntry"
+               }, 
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#value", 
+                  "@id": "_:b16", 
+                  "@type": "Mapping", 
+                  "key": "value"
+               }, 
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#entryTimeStamp", 
+                  "@id": "_:b13", 
+                  "@type": "Mapping", 
+                  "key": "entryTimeStamp"
+               }
+            ]
+         }
+      }, 
+      {
+         "describes": {
+            "@id": "_:b18", 
+            "@type": "Property", 
+            "links": "_:b7", 
+            "label": "tamb"
+         }, 
+         "@id": "_:b17", 
+         "@type": "TD", 
+         "identifier": "tamb", 
+         "access_mappings": {
+            "source": {
+               "href": "$item/properties/tamb", 
+               "@id": "_:b7", 
+               "@type": "Endpoint", 
+               "mediaType": "application/json"
+            }, 
+            "@id": "_:b19", 
+            "@type": "AccessMapping", 
+            "mappings": [
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#value", 
+                  "@id": "_:b16", 
+                  "@type": "Mapping", 
+                  "key": "value"
+               }, 
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#entryTimeStamp", 
+                  "@id": "_:b13", 
+                  "@type": "Mapping", 
+                  "key": "entryTimeStamp"
+               }, 
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#hasLatestEntry", 
+                  "@id": "_:b14", 
+                  "@type": "Mapping", 
+                  "key": "hasLatestEntry"
+               }
+            ]
+         }
+      }, 
+      {
+         "describes": {
+            "@id": "_:b21", 
+            "@type": "Property", 
+            "links": "_:b8", 
+            "label": "freq"
+         }, 
+         "@id": "_:b20", 
+         "@type": "TD", 
+         "identifier": "freq", 
+         "access_mappings": {
+            "source": {
+               "href": "$item/properties/freq", 
+               "@id": "_:b8", 
+               "@type": "Endpoint", 
+               "mediaType": "application/json"
+            }, 
+            "@id": "_:b22", 
+            "@type": "AccessMapping", 
+            "mappings": [
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#value", 
+                  "@id": "_:b16", 
+                  "@type": "Mapping", 
+                  "key": "value"
+               }, 
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#entryTimeStamp", 
+                  "@id": "_:b13", 
+                  "@type": "Mapping", 
+                  "key": "entryTimeStamp"
+               }, 
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#hasLatestEntry", 
+                  "@id": "_:b14", 
+                  "@type": "Mapping", 
+                  "key": "hasLatestEntry"
+               }
+            ]
+         }
+      }, 
+      {
+         "describes": {
+            "@id": "_:b24", 
+            "@type": "Property", 
+            "links": "_:b9", 
+            "label": "mag"
+         }, 
+         "@id": "_:b23", 
+         "@type": "TD", 
+         "identifier": "mag", 
+         "access_mappings": {
+            "source": {
+               "href": "$item/properties/mag", 
+               "@id": "_:b9", 
+               "@type": "Endpoint", 
+               "mediaType": "application/json"
+            }, 
+            "@id": "_:b25", 
+            "@type": "AccessMapping", 
+            "mappings": [
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#entryTimeStamp", 
+                  "@id": "_:b13", 
+                  "@type": "Mapping", 
+                  "key": "entryTimeStamp"
+               }, 
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#hasLatestEntry", 
+                  "@id": "_:b14", 
+                  "@type": "Mapping", 
+                  "key": "hasLatestEntry"
+               }, 
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#value", 
+                  "@id": "_:b16", 
+                  "@type": "Mapping", 
+                  "key": "value"
+               }
+            ]
+         }
+      }, 
+      {
+         "describes": {
+            "@id": "_:b15", 
+            "@type": "Service"
+         }, 
+         "@id": "_:b26", 
+         "@type": "TD", 
+         "identifier": "service", 
+         "access_mappings": {
+            "source": {
+               "href": {
+                  "@type": "http://www.w3.org/2001/XMLSchema#anyURI", 
+                  "@value": "http://localhost:5005/things"
+               }, 
+               "@id": "_:b32", 
+               "@type": "Endpoint", 
+               "mediaType": "application/json"
+            }, 
+            "@id": "_:b27", 
+            "@type": "AccessMapping", 
+            "mappings": {
+               "predicate": "http://iot.linkeddata.es/def/wot#exposesWebThing", 
+               "transformed_by": {
+                  "describes": {
+                     "@id": "_:b29", 
+                     "@type": "Thing", 
+                     "links": "_:b3", 
+                     "interactions": [
+                        {
+                           "@id": "_:b18", 
+                           "@type": "Property", 
+                           "links": {
+                              "href": "$item/properties/tamb", 
+                              "@id": "_:b7", 
+                              "@type": "Endpoint", 
+                              "mediaType": "application/json"
+                           }, 
+                           "label": "tamb"
+                        }, 
+                        {
+                           "@id": "_:b11", 
+                           "@type": "Property", 
+                           "links": {
+                              "href": "$item/properties/tsky", 
+                              "@id": "_:b6", 
+                              "@type": "Endpoint", 
+                              "mediaType": "application/json"
+                           }, 
+                           "label": "tsky"
+                        }, 
+                        {
+                           "@id": "_:b21", 
+                           "@type": "Property", 
+                           "links": {
+                              "href": "$item/properties/freq", 
+                              "@id": "_:b8", 
+                              "@type": "Endpoint", 
+                              "mediaType": "application/json"
+                           }, 
+                           "label": "freq"
+                        }, 
+                        {
+                           "@id": "_:b24", 
+                           "@type": "Property", 
+                           "links": {
+                              "href": "$item/properties/mag", 
+                              "@id": "_:b9", 
+                              "@type": "Endpoint", 
+                              "mediaType": "application/json"
+                           }, 
+                           "label": "mag"
+                        }
+                     ]
+                  }, 
+                  "@id": "_:b28", 
+                  "@type": "TD", 
+                  "identifier": "stars", 
+                  "access_mappings": {
+                     "source": {
+                        "href": "$item", 
+                        "@id": "_:b3", 
+                        "@type": "Endpoint", 
+                        "mediaType": "application/json"
+                     }, 
+                     "@id": "_:b30", 
+                     "@type": "AccessMapping", 
+                     "mappings": [
+                        {
+                           "predicate": "http://iot.linkeddata.es/def/wot#identifier", 
+                           "@id": "_:b4", 
+                           "@type": "Mapping", 
+                           "key": "identifier"
+                        }, 
+                        {
+                           "predicate": "http://iot.linkeddata.es/def/wot#creationDate", 
+                           "@id": "_:b5", 
+                           "@type": "Mapping", 
+                           "key": "creationDate"
+                        }
+                     ]
+                  }
+               }, 
+               "@id": "_:b31", 
+               "@type": "Mapping", 
+               "key": "exposesWebThing"
+            }
+         }
+      }, 
+      {
+         "describes": {
+            "@id": "_:b29", 
+            "@type": "Thing", 
+            "links": "_:b3", 
+            "interactions": [
+               {
+                  "@id": "_:b18", 
+                  "@type": "Property", 
+                  "links": {
+                     "href": "$item/properties/tamb", 
+                     "@id": "_:b7", 
+                     "@type": "Endpoint", 
+                     "mediaType": "application/json"
+                  }, 
+                  "label": "tamb"
+               }, 
+               {
+                  "@id": "_:b11", 
+                  "@type": "Property", 
+                  "links": {
+                     "href": "$item/properties/tsky", 
+                     "@id": "_:b6", 
+                     "@type": "Endpoint", 
+                     "mediaType": "application/json"
+                  }, 
+                  "label": "tsky"
+               }, 
+               {
+                  "@id": "_:b21", 
+                  "@type": "Property", 
+                  "links": {
+                     "href": "$item/properties/freq", 
+                     "@id": "_:b8", 
+                     "@type": "Endpoint", 
+                     "mediaType": "application/json"
+                  }, 
+                  "label": "freq"
+               }, 
+               {
+                  "@id": "_:b24", 
+                  "@type": "Property", 
+                  "links": {
+                     "href": "$item/properties/mag", 
+                     "@id": "_:b9", 
+                     "@type": "Endpoint", 
+                     "mediaType": "application/json"
+                  }, 
+                  "label": "mag"
+               }
+            ]
+         }, 
+         "@id": "_:b28", 
+         "@type": "TD", 
+         "identifier": "stars", 
+         "access_mappings": {
+            "source": {
+               "href": "$item", 
+               "@id": "_:b3", 
+               "@type": "Endpoint", 
+               "mediaType": "application/json"
+            }, 
+            "@id": "_:b30", 
+            "@type": "AccessMapping", 
+            "mappings": [
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#identifier", 
+                  "@id": "_:b4", 
+                  "@type": "Mapping", 
+                  "key": "identifier"
+               }, 
+               {
+                  "predicate": "http://iot.linkeddata.es/def/wot#creationDate", 
+                  "@id": "_:b5", 
+                  "@type": "Mapping", 
+                  "key": "creationDate"
+               }
+            ]
+         }
+      }
+   ]
+}
