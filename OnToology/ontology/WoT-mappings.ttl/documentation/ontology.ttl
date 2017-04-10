@@ -27,19 +27,19 @@ vs:term_status
 
 :Mapping
       a       owl:Class ;
-      rdfs:comment "An entity than indicates the relation between a given key (provided as structure data in an online resource) and the RDF property to which the values should be mapped and the target type of object. The RDF properties could be OWL object or datatype properties. The target object might be RDFS classes or datatypes."@en ;
+      rdfs:comment "An entity that indicates the relation between a given key (provided as structure data in an online resource) and the RDF property to which the values should be mapped and the target type of object. The RDF properties could be OWL object or datatype properties. The target object might be RDFS classes or datatypes."@en ;
       rdfs:label "Mapping"@en ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :key ;
-                owl:someValuesFrom xsd:string
-              ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:minQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onClass rdf:Property ;
                 owl:onProperty :predicate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:onProperty :key ;
+                owl:someValuesFrom xsd:string
               ] ;
       owl:equivalentClass
               [ a       owl:Class ;
@@ -120,15 +120,15 @@ owl:DatatypeProperty
       rdfs:subClassOf :Mapping ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom owl:ObjectProperty ;
+                owl:onProperty :predicate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:maxQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onClass <http://iot.linkeddata.es/def/wot#ThingDescription> ;
                 owl:onProperty :valuesTransformedBy
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom owl:ObjectProperty ;
-                owl:onProperty :predicate
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
