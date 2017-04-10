@@ -182,7 +182,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
                            owl:onProperty :key ;
                            owl:someValuesFrom xsd:string
                          ] ;
-         rdfs:comment "An entity than indicates the relation between a given key (provided as structure data in an online resource) and the RDF property to which the values should be mapped and the target type of object. The RDF properties could be OWL object or datatype properties. The target object might be RDFS classes or datatypes."@en ;
+         rdfs:comment "An entity that indicates the relation between a given key (provided as structure data in an online resource) and the RDF property to which the values should be mapped and the target type of object. The RDF properties could be OWL object or datatype properties. The target object might be RDFS classes or datatypes."@en ;
          rdfs:label "Mapping"@en .
 
 
