@@ -83,7 +83,7 @@ vs:term_status
 :hasAccessMapping
       a       owl:ObjectProperty ;
       rdfs:comment "Link between a thing description and the access mapping that can be used to access the information provided in the endpoints exposes by such thing description. This class acts as an n-ary pattern linking the enpoints with the spedific mappings."@en ;
-      rdfs:domain <http://iot.linkeddata.es/def/wot#ThingDescription> ;
+      rdfs:domain <http://iot.linkeddata.es/def/core#ThingDescription> ;
       rdfs:label "has access mapping"@en ;
       rdfs:range :AccessMapping .
 
@@ -98,15 +98,15 @@ owl:DatatypeProperty
       rdfs:label "Access mapping"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom :Mapping ;
+                owl:onProperty :hasMapping
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:onClass <http://iot.linkeddata.es/def/wot#Endpoint> ;
                 owl:onProperty :mapsResourcesFrom ;
                 owl:qualifiedCardinality
                         "1"^^xsd:nonNegativeInteger
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom :Mapping ;
-                owl:onProperty :hasMapping
               ] .
 
 :valuesTransformedBy
@@ -120,20 +120,20 @@ owl:DatatypeProperty
       rdfs:subClassOf :Mapping ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom owl:ObjectProperty ;
-                owl:onProperty :predicate
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:maxQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
-                owl:onClass <http://iot.linkeddata.es/def/wot#ThingDescription> ;
+                owl:onClass <http://iot.linkeddata.es/def/core#ThingDescription> ;
                 owl:onProperty :valuesTransformedBy
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
                 owl:allValuesFrom rdfs:Class ;
                 owl:onProperty :targetClass
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom owl:ObjectProperty ;
+                owl:onProperty :predicate
               ] .
 
 rdfs:Datatype
@@ -179,7 +179,7 @@ rdfs:Class
 :exposes
       a       owl:ObjectProperty ;
       rdfs:comment "Link from a thing description to the endpoints in which it exposes information"@en ;
-      rdfs:domain <http://iot.linkeddata.es/def/wot#ThingDescription> ;
+      rdfs:domain <http://iot.linkeddata.es/def/core#ThingDescription> ;
       rdfs:label "exposes"@en ;
       rdfs:range <http://iot.linkeddata.es/def/wot#Endpoint> .
 
