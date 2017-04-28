@@ -48,7 +48,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/wot-mappings#exposes
 :exposes rdf:type owl:ObjectProperty ;
-         rdfs:domain <http://iot.linkeddata.es/def/wot#ThingDescription> ;
+         rdfs:domain <http://iot.linkeddata.es/def/core#ThingDescription> ;
          rdfs:range <http://iot.linkeddata.es/def/wot#Endpoint> ;
          rdfs:comment "Link from a thing description to the endpoints in which it exposes information"@en ;
          rdfs:label "exposes"@en .
@@ -56,7 +56,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 ###  http://iot.linkeddata.es/def/wot-mappings#hasAccessMapping
 :hasAccessMapping rdf:type owl:ObjectProperty ;
-                  rdfs:domain <http://iot.linkeddata.es/def/wot#ThingDescription> ;
+                  rdfs:domain <http://iot.linkeddata.es/def/core#ThingDescription> ;
                   rdfs:range :AccessMapping ;
                   rdfs:comment "Link between a thing description and the access mapping that can be used to access the information provided in the endpoints exposes by such thing description. This class acts as an n-ary pattern linking the enpoints with the spedific mappings."@en ;
                   rdfs:label "has access mapping"@en .
@@ -200,7 +200,7 @@ vs:term_status rdf:type owl:AnnotationProperty .
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :valuesTransformedBy ;
                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onClass <http://iot.linkeddata.es/def/wot#ThingDescription>
+                                         owl:onClass <http://iot.linkeddata.es/def/core#ThingDescription>
                                        ] ;
                        rdfs:comment "An entity specialized from Mapping than indicates the relation between a given key (provided as structure data in an online resource) and the OWL object property to which the values should be mapped and optionally the rdfs class or classes that the target instances belong to."@en ;
                        rdfs:label "Object property mapping"@en .
