@@ -31,15 +31,15 @@ vs:term_status
       rdfs:label "Mapping"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:onProperty :key ;
+                owl:someValuesFrom xsd:string
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:minQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onClass rdf:Property ;
                 owl:onProperty :predicate
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:onProperty :key ;
-                owl:someValuesFrom xsd:string
               ] ;
       owl:equivalentClass
               [ a       owl:Class ;
@@ -98,15 +98,15 @@ owl:DatatypeProperty
       rdfs:label "Access mapping"@en ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom :Mapping ;
-                owl:onProperty :hasMapping
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
                 owl:onClass <http://iot.linkeddata.es/def/wot#Endpoint> ;
                 owl:onProperty :mapsResourcesFrom ;
                 owl:qualifiedCardinality
                         "1"^^xsd:nonNegativeInteger
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
+                owl:allValuesFrom :Mapping ;
+                owl:onProperty :hasMapping
               ] .
 
 :valuesTransformedBy
@@ -120,6 +120,11 @@ owl:DatatypeProperty
       rdfs:subClassOf :Mapping ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom owl:ObjectProperty ;
+                owl:onProperty :predicate
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:allValuesFrom owl:Class ;
                 owl:onProperty :targetClass
               ] ;
@@ -129,11 +134,6 @@ owl:DatatypeProperty
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onClass <http://iot.linkeddata.es/def/core#ThingDescription> ;
                 owl:onProperty :valuesTransformedBy
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom owl:ObjectProperty ;
-                owl:onProperty :predicate
               ] .
 
 rdfs:Datatype
@@ -161,6 +161,10 @@ dcterms:contributor
       rdfs:label "has mapping"@en ;
       rdfs:range :Mapping .
 
+owl:Class
+      a       owl:Class ;
+      rdfs:isDefinedBy "http://www.w3.org/2002/07/owl#" .
+
 owl:ObjectProperty
       a       owl:Class ;
       rdfs:isDefinedBy owl: ;
@@ -171,10 +175,6 @@ owl:ObjectProperty
       rdfs:domain :ObjectPropertyMapping ;
       rdfs:label "target class"@en ;
       rdfs:range owl:Class .
-
-rdfs:Class
-      a       owl:Class ;
-      rdfs:isDefinedBy rdfs: .
 
 :exposes
       a       owl:ObjectProperty ;
@@ -194,11 +194,14 @@ rdf:Property
       rdfs:subClassOf :Mapping ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom owl:DatatypeProperty ;
-                owl:onProperty :predicate
+                owl:allValuesFrom rdfs:Datatype ;
+                owl:onProperty :targetDatatype
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
-                owl:allValuesFrom rdfs:Datatype ;
-                owl:onProperty :targetDatatype
+                owl:allValuesFrom owl:DatatypeProperty ;
+                owl:onProperty :predicate
               ] .
+
+<http://iot.linkeddata.es/def/wot#Endpoint>
+      a       owl:Class .
