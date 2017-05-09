@@ -22,7 +22,7 @@
                                               dcterms:creator <http://purl.org/net/mpoveda> ;
                                               vann:preferredNamespacePrefix "vcnt-map" ;
                                               dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                              owl:versionInfo "0.0.2" ;
+                                              owl:versionInfo "0.0.3" ;
                                               dc:title "Vicinity WoT mappings model"@en ;
                                               dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
                                               dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
