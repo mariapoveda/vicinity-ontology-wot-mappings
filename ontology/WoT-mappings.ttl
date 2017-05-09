@@ -21,8 +21,8 @@
                                                           <http://iot.linkeddata.es/def/wot#> ;
                                               dcterms:creator <http://purl.org/net/mpoveda> ;
                                               vann:preferredNamespacePrefix "vcnt-map" ;
-                                              dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
                                               owl:versionInfo "0.0.3" ;
+                                              dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
                                               dc:title "Vicinity WoT mappings model"@en ;
                                               dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
                                               dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
@@ -136,6 +136,10 @@ vs:term_status rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+###  http://iot.linkeddata.es/def/wot#Endpoint
+<http://iot.linkeddata.es/def/wot#Endpoint> rdf:type owl:Class .
+
+
 ###  http://iot.linkeddata.es/def/wot-mappings#AccessMapping
 :AccessMapping rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -211,14 +215,14 @@ rdf:Property rdf:type owl:Class ;
              rdfs:isDefinedBy rdf: .
 
 
-###  http://www.w3.org/2000/01/rdf-schema#Class
-rdfs:Class rdf:type owl:Class ;
-           rdfs:isDefinedBy rdfs: .
-
-
 ###  http://www.w3.org/2000/01/rdf-schema#Datatype
 rdfs:Datatype rdf:type owl:Class ;
               rdfs:isDefinedBy rdfs: .
+
+
+###  http://www.w3.org/2002/07/owl#Class
+owl:Class rdf:type owl:Class ;
+          rdfs:isDefinedBy "http://www.w3.org/2002/07/owl#" .
 
 
 ###  http://www.w3.org/2002/07/owl#DatatypeProperty
