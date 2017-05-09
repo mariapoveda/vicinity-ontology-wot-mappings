@@ -59,18 +59,19 @@ This section provides details for each class and property defined by Vicinity Wo
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#mapsResourcesFrom"
-               title="http://iot.linkeddata.es/def/wot-mappings#mapsResourcesFrom">maps resources from</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">exactly</span> 1 <span class="dotted" title="http://iot.linkeddata.es/def/wot#Endpoint">endpoint</span>
-         </dd>
-         <dd>
             <a href="#hasMapping"
                title="http://iot.linkeddata.es/def/wot-mappings#hasMapping">has mapping</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#Mapping"
                title="http://iot.linkeddata.es/def/wot-mappings#Mapping">Mapping</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#mapsResourcesFrom"
+               title="http://iot.linkeddata.es/def/wot-mappings#mapsResourcesFrom">maps resources from</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">exactly</span> 1 <span class="dotted" title="http://iot.linkeddata.es/def/wot#Endpoint">endpoint</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -104,14 +105,6 @@ This section provides details for each class and property defined by Vicinity Wo
          <dt>is defined by</dt>
          <dd>
             <a href="http://www.w3.org/2000/01/rdf-schema#">http://www.w3.org/2000/01/rdf-schema#</a>
-         </dd>
-      </dl>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#targetClass"
-               title="http://iot.linkeddata.es/def/wot-mappings#targetClass">target class</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -177,19 +170,19 @@ This section provides details for each class and property defined by Vicinity Wo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#predicate"
-               title="http://iot.linkeddata.es/def/wot-mappings#predicate">predicate</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://www.w3.org/2002/07/owl#DatatypeProperty" title="http://www.w3.org/2002/07/owl#DatatypeProperty">datatype property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#targetDatatype"
                title="http://iot.linkeddata.es/def/wot-mappings#targetDatatype">target datatype</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://www.w3.org/2000/01/rdf-schema#Datatype" title="http://www.w3.org/2000/01/rdf-schema#Datatype">datatype</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#predicate"
+               title="http://iot.linkeddata.es/def/wot-mappings#predicate">predicate</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#http://www.w3.org/2002/07/owl#DatatypeProperty" title="http://www.w3.org/2002/07/owl#DatatypeProperty">datatype property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -223,18 +216,18 @@ This section provides details for each class and property defined by Vicinity Wo
          </dd>
          <dt>has super-classes</dt>
          <dd>
+            <a href="#key" title="http://iot.linkeddata.es/def/wot-mappings#key">key</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+         </dd>
+         <dd>
             <a href="#predicate"
                title="http://iot.linkeddata.es/def/wot-mappings#predicate">predicate</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">min</span> 1 <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
                title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">property</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
-            <a href="#key" title="http://iot.linkeddata.es/def/wot-mappings#key">key</a>
-            <sup class="type-dp" title="data property">dp</sup> 
-            <span class="logic">some</span> 
-            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
@@ -307,19 +300,19 @@ This section provides details for each class and property defined by Vicinity Wo
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dd>
-            <a href="#targetClass"
-               title="http://iot.linkeddata.es/def/wot-mappings#targetClass">target class</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">only</span> 
-            <a href="#http://www.w3.org/2000/01/rdf-schema#Class" title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dd>
             <a href="#valuesTransformedBy"
                title="http://iot.linkeddata.es/def/wot-mappings#valuesTransformedBy">values transformed by</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">max</span> 1 <span class="dotted"
-                  title="http://iot.linkeddata.es/def/wot#ThingDescription">thing description</span>
+                  title="http://iot.linkeddata.es/def/core#ThingDescription">thing description</span>
+         </dd>
+         <dd>
+            <a href="#targetClass"
+               title="http://iot.linkeddata.es/def/wot-mappings#targetClass">target class</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#Class">class</span>
+            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
@@ -405,11 +398,12 @@ This section provides details for each class and property defined by Vicinity Wo
             <dt>has domain</dt>
             <dd>
                <span class="dotted"
-                     title="http://iot.linkeddata.es/def/wot#ThingDescription">thing description</span>
+                     title="http://iot.linkeddata.es/def/core#ThingDescription">thing description</span>
             </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://iot.linkeddata.es/def/wot#Endpoint">endpoint</span>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -429,7 +423,7 @@ This section provides details for each class and property defined by Vicinity Wo
             <dt>has domain</dt>
             <dd>
                <span class="dotted"
-                     title="http://iot.linkeddata.es/def/wot#ThingDescription">thing description</span>
+                     title="http://iot.linkeddata.es/def/core#ThingDescription">thing description</span>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -517,6 +511,7 @@ This section provides details for each class and property defined by Vicinity Wo
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://iot.linkeddata.es/def/wot#Endpoint">endpoint</span>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -549,7 +544,7 @@ This section provides details for each class and property defined by Vicinity Wo
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#http://www.w3.org/2000/01/rdf-schema#Class" title="http://www.w3.org/2000/01/rdf-schema#Class">class</a>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#Class">class</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -647,4 +642,12 @@ This section provides details for each class and property defined by Vicinity Wo
          </dl>
       </div>
    </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
 </div>
