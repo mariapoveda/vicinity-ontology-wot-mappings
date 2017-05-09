@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-04-21 15:51:44 +0000</string>
+	<string>2017-05-09 08:55:08 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -2811,7 +2811,7 @@ map:targetClass (0..N)}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{231.51872705411435, 436.82638920073794}, {78.099367376061991, 23.012603759765625}}</string>
+					<string>{{247.95522491171667, 436.82638920073794}, {61.662869518459672, 23.012603759765625}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FontInfo</key>
@@ -2892,7 +2892,7 @@ map:targetClass (0..N)}</string>
 \pard\tx60\tx300\tx940\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li20\fi-20\pardirnatural\qc
 
 \f0\fs24 \cf2 \expnd0\expndtw0\kerning0
-rdfs:Class}</string>
+owl:Class}</string>
 					</dict>
 					<key>VFlip</key>
 					<string>YES</string>
@@ -17083,7 +17083,7 @@ core:ThingDescription}</string>
 						<key>ID</key>
 						<integer>42639</integer>
 						<key>Position</key>
-						<real>0.52014115763201929</real>
+						<real>0.52014118432998657</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -17360,7 +17360,7 @@ sourcesFrom}</string>
 						<key>ID</key>
 						<integer>42630</integer>
 						<key>Position</key>
-						<real>0.32769861901644948</real>
+						<real>0.32769861817359924</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -19979,7 +19979,7 @@ sourcesFrom}</string>
 						<key>ID</key>
 						<integer>42595</integer>
 						<key>Position</key>
-						<real>0.30212318375198416</real>
+						<real>0.30212318897247314</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -20337,7 +20337,7 @@ wot:href}</string>
 						<key>ID</key>
 						<integer>42597</integer>
 						<key>Position</key>
-						<real>0.46999649828779316</real>
+						<real>0.46999651193618774</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -21265,7 +21265,7 @@ map:AccessMapping}</string>
 						<key>ID</key>
 						<integer>42583</integer>
 						<key>Position</key>
-						<real>0.36115705870712322</real>
+						<real>0.36115705966949463</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -22952,7 +22952,7 @@ Class}</string>
 						<key>ID</key>
 						<integer>42524</integer>
 						<key>Position</key>
-						<real>0.52083043246592453</real>
+						<real>0.52083045244216919</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -23229,7 +23229,7 @@ sourcesFrom}</string>
 						<key>ID</key>
 						<integer>42684</integer>
 						<key>Position</key>
-						<real>0.31102326456537066</real>
+						<real>0.31102326512336731</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -25960,7 +25960,7 @@ owl:DatatypeProperty}</string>
 						<key>ID</key>
 						<integer>42027</integer>
 						<key>Position</key>
-						<real>0.33480916778443409</real>
+						<real>0.33480915427207947</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -28917,7 +28917,7 @@ map:Mapping}</string>
 						<key>ID</key>
 						<integer>42427</integer>
 						<key>Position</key>
-						<real>0.52857497577333978</real>
+						<real>0.52857500314712524</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -30079,7 +30079,7 @@ map:hasAccessMapping}</string>
 						<key>ID</key>
 						<integer>42407</integer>
 						<key>Position</key>
-						<real>0.63603726416900097</real>
+						<real>0.63603729009628296</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -35549,7 +35549,7 @@ map:Mapping}</string>
 						<key>ID</key>
 						<integer>35164</integer>
 						<key>Position</key>
-						<real>0.41056176378133424</real>
+						<real>0.41056177020072937</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -44375,7 +44375,7 @@ wot:hasMediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>107</real>
+					<real>58.378471593657025</real>
 					<key>Points</key>
 					<array>
 						<string>{595.13589164199027, 654.62451408834215}</string>
@@ -60411,7 +60411,7 @@ wot:hasMediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>107</real>
+					<real>62.692995979288114</real>
 					<key>Points</key>
 					<array>
 						<string>{157.06024629690415, 660.18929210012618}</string>
@@ -64588,7 +64588,7 @@ wot:href}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>-1</real>
+					<real>106.703125</real>
 					<key>Points</key>
 					<array>
 						<string>{162.21133568698656, 1122.2431374356165}</string>
@@ -78006,7 +78006,7 @@ wot:hasMediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>-1</real>
+					<real>106.703125</real>
 					<key>Points</key>
 					<array>
 						<string>{172.2024546408179, 729.32484601230317}</string>
@@ -98480,7 +98480,7 @@ map:hasMapping }</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>-1</real>
+					<real>13.14453125</real>
 					<key>Points</key>
 					<array>
 						<string>{511.89631093865046, 689.94477875385371}</string>
@@ -118250,9 +118250,11 @@ wot:describes}</string>
 		<key>BottomSlabHeight</key>
 		<real>195</real>
 		<key>CurrentSheet</key>
-		<integer>2</integer>
+		<integer>0</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
+		<key>FitInWindow</key>
+		<true/>
 		<key>Frame</key>
 		<string>{{73, -896}, {1440, 873}}</string>
 		<key>ShowInfo</key>
@@ -118264,9 +118266,9 @@ wot:describes}</string>
 		<key>SidebarWidth</key>
 		<integer>230</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 481}, {893, 728}}</string>
+		<string>{{0, 0}, {940.83928571428567, 767}}</string>
 		<key>Zoom</key>
-		<real>1</real>
+		<real>0.94915254237288138</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
