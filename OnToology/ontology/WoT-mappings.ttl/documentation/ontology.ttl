@@ -65,7 +65,7 @@ vs:term_status
       vann:preferredNamespaceUri
               "http://iot.linkeddata.es/def/wot-mappings" ;
       owl:imports <http://iot.linkeddata.es/def/wot#> , <http://iot.linkeddata.es/def/core#> ;
-      owl:versionInfo "0.0.2" .
+      owl:versionInfo "0.0.3" .
 
 :jsonPath
       a       owl:DatatypeProperty ;
@@ -120,15 +120,15 @@ owl:DatatypeProperty
       rdfs:subClassOf :Mapping ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
+                owl:allValuesFrom owl:Class ;
+                owl:onProperty :targetClass
+              ] ;
+      rdfs:subClassOf
+              [ a       owl:Restriction ;
                 owl:maxQualifiedCardinality
                         "1"^^xsd:nonNegativeInteger ;
                 owl:onClass <http://iot.linkeddata.es/def/core#ThingDescription> ;
                 owl:onProperty :valuesTransformedBy
-              ] ;
-      rdfs:subClassOf
-              [ a       owl:Restriction ;
-                owl:allValuesFrom owl:Class ;
-                owl:onProperty :targetClass
               ] ;
       rdfs:subClassOf
               [ a       owl:Restriction ;
