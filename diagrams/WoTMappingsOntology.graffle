@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-05-12 08:43:16 +0000</string>
+	<string>2017-05-18 15:02:17 +0000</string>
 	<key>Modifier</key>
 	<string>María Poveda</string>
 	<key>NotesVisible</key>
@@ -85,7 +85,7 @@
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {1018.1181318681319, 830}}</string>
+				<string>{{0, 0}, {876, 830}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -104,7 +104,7 @@
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{1018.1181318681319, 830}</string>
+			<string>{876, 830}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -7384,7 +7384,7 @@ Class}</string>
 			<key>BackgroundGraphic</key>
 			<dict>
 				<key>Bounds</key>
-				<string>{{0, 0}, {940.83928571428567, 767}}</string>
+				<string>{{0, 0}, {876, 783}}</string>
 				<key>Class</key>
 				<string>SolidGraphic</string>
 				<key>ID</key>
@@ -7403,7 +7403,7 @@ Class}</string>
 			<key>CanvasOrigin</key>
 			<string>{0, 0}</string>
 			<key>CanvasSize</key>
-			<string>{940.83928571428567, 767}</string>
+			<string>{876, 783}</string>
 			<key>ColumnAlign</key>
 			<integer>1</integer>
 			<key>ColumnSpacing</key>
@@ -38869,7 +38869,7 @@ core:describes}</string>
 						<key>ID</key>
 						<integer>42014</integer>
 						<key>Position</key>
-						<real>0.54259751016637459</real>
+						<real>0.54259753227233887</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -39060,7 +39060,7 @@ map:hasMapping }</string>
 						<key>ID</key>
 						<integer>34925</integer>
 						<key>Position</key>
-						<real>0.57399995116736657</real>
+						<real>0.57399994134902954</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -39320,7 +39320,7 @@ map:hasMapping }</string>
 						<key>ID</key>
 						<integer>34922</integer>
 						<key>Position</key>
-						<real>0.55914405391810817</real>
+						<real>0.55914407968521118</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -39608,10 +39608,8 @@ map:hasMapping }</string>
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
 
 \f0\fs24 \cf0 \{\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
      \'93latitude\'94: \cf2 \expnd0\expndtw0\kerning0
 40.451,\cf0 \kerning1\expnd0\expndtw0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
      \'93longitude\'94:\cf2 \expnd0\expndtw0\kerning0
 -3.7261\cf0 \kerning1\expnd0\expndtw0 \
 \}}</string>
@@ -40358,7 +40356,7 @@ wot:Link}</string>
 						<key>ID</key>
 						<integer>42748</integer>
 						<key>Position</key>
-						<real>0.69902978542205918</real>
+						<real>0.69902980327606201</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -40970,7 +40968,7 @@ core:ThingDescription}</string>
 						<key>ID</key>
 						<integer>42016</integer>
 						<key>Position</key>
-						<real>0.43332691856062294</real>
+						<real>0.43332692980766296</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -41173,7 +41171,7 @@ map:Mapping}</string>
 						<key>ID</key>
 						<integer>42027</integer>
 						<key>Position</key>
-						<real>0.53294288724196281</real>
+						<real>0.53294289112091064</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -41449,7 +41447,7 @@ map:predicate}</string>
 						<key>ID</key>
 						<integer>42310</integer>
 						<key>Position</key>
-						<real>0.57941418983891901</real>
+						<real>0.57941418886184692</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -43036,7 +43034,7 @@ wot:hasMediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{280.16201233536412, 653.7926989228331}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>40.391823558230698</real>
+					<real>40.391822814941406</real>
 					<key>Points</key>
 					<array>
 						<string>{188.616005453393, 612.43508076726835}</string>
@@ -43197,7 +43195,7 @@ wot:hasMediaType}</string>
 						<key>ID</key>
 						<integer>42019</integer>
 						<key>Position</key>
-						<real>0.47959245495952468</real>
+						<real>0.47959244251251221</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -43449,7 +43447,7 @@ map:hasAccessMapping}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{314.64747439670919, 617.91846972904}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>40.391823558230698</real>
+					<real>40.391822814941406</real>
 					<key>Points</key>
 					<array>
 						<string>{188.616005453393, 612.43508076726835}</string>
@@ -43812,7 +43810,7 @@ wot:Link}</string>
 						<key>ID</key>
 						<integer>42744</integer>
 						<key>Position</key>
-						<real>0.42986130561084007</real>
+						<real>0.42986130714416504</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -45047,7 +45045,7 @@ core:Thermometer}</string>
 						<key>ID</key>
 						<integer>35319</integer>
 						<key>Position</key>
-						<real>0.75777270068046965</real>
+						<real>0.75777268409729004</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -47483,7 +47481,7 @@ wot:Thing}</string>
 						<key>ID</key>
 						<integer>35039</integer>
 						<key>Position</key>
-						<real>0.28079657661272389</real>
+						<real>0.2807965874671936</real>
 						<key>RotationType</key>
 						<integer>0</integer>
 					</dict>
@@ -69300,7 +69298,7 @@ wot:hasMediaType}</string>
 					<key>OrthogonalBarPoint</key>
 					<string>{487.98009404187127, 416.11893402281328}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>62.692995979288114</real>
+					<real>107</real>
 					<key>Points</key>
 					<array>
 						<string>{157.06024629690415, 660.18929210012618}</string>
@@ -127145,7 +127143,7 @@ wot:describes}</string>
 		<key>FitInWindow</key>
 		<true/>
 		<key>Frame</key>
-		<string>{{102, -899}, {1440, 873}}</string>
+		<string>{{73, -899}, {1440, 873}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>ShowRuler</key>
